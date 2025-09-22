@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeoVolt - Electric Vehicle</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/184666ffd2.js" crossorigin="anonymous"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Jura:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Jura:wght@300..700&display=swap');
+
+        .KanushriPage {
+        background-color: black;
+        font-family: "Inria Serif", serif;
+        color: white;
+        padding-top: 100px; /* Account for fixed header */
+        min-height: 100vh;
+      }
+
+      .KanushriPage hr {
+        border: 1px solid white;
+        opacity: 0.7;
+      }
+
+      .feature-text p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      .KanushriPage img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .icon-box p {
+        margin-top: 0.5rem;
+        font-size: 16px;
+      }
+
+      /* --- MOBILE VIEW --- */
+      @media (max-width: 768px) {
+        .car-features {
+          display: flex;
+        }
+        .car-img {
+          transform: rotate(90deg);
+          height: 100%;
+        }
+        .car-col {
+          flex: 2; /* Car gets more width */
+        }
+        .features-col {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        .features-col .icon-box {
+          margin-bottom: 1rem;
+        }
+        .desktop-features {
+          display: none !important; /* Hide bottom row features on mobile */
+        }
+      }
+
+      /* --- DESKTOP VIEW --- */
+      @media (min-width: 769px) {
+        .mobile-features {
+          display: none !important; /* Hide side features on desktop */
+        }
+        .car-img {
+          transform: rotate(180deg);
+          width: 100%;
+        }
+      }
+
+
+      /* Janhvesh */
+      #nav-bar {
+    background-color: #D9D9D985;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Janhvesh {
+    background-image: url("Pictures/Background_image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;     
+    background-position: center;
+    background-color: black;
+    padding-top: 100px; /* Account for fixed header */
+    min-height: 100vh;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    border-bottom: white 1px solid;
+    font-size: 25px;
+    font-family: 'Jura';
+    font-weight: 400;
+}
+
+.logoimg {
+    height: 28px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+#BTD {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+    width: 33%;
+}
+
+#BTD:hover {
+    background-color: white;
+    color: black;
+    transition: ease-in-out 0.5s;
+}
+
+#FND {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+    width: 34%;
+    border-left: white 1px solid;
+}
+
+#FND:hover {
+    background-color: white;
+    color: black;
+    transition: ease-in-out 0.5s;
+}
+
+#CWE {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    height: 100%;
+    width: 33%;
+    border-left: white 1px solid;
+}
+
+#CWE:hover {
+    background-color: white;
+    color: black;
+    transition: ease-in-out 0.5s;
+}
+
+#heading {
+    color: white;
+    width: 628px;
+    height: 54px;
+    font-family: "Encode Sans Condensed";
+    margin-top: 130px;
+    margin-left: 67px;
+    font-weight: 800;
+    font-size: 43px;
+}
+
+#subhead {
+    width: 600px;
+    height: 28px;
+    color: #FFFFFF;
+    font-family: "Encode Sans Condensed";
+    margin-left: 67px;
+    font-size: 22px;
+}
+
+.content-box {
+    margin-left: 67px;
+    width: 1400px;
+    height: 473px;
+}
+
+#up {
+    display: flex;
+    background-color: rgba(64, 165, 207, 0.46);
+    height : 79px;
+}
+
+#down {
+    background-color: rgba(217, 217, 217, 0.1);
+    height: 394px;
+    padding: 2px;
+    padding-bottom: 2px;
+}
+
+.drop {
+    font-size: 15px;
+    color: white ;
+    margin-left: 30px;
+}
+
+.drop-title {
+    font-family: "Encode Sans Condensed";
+}
+
+#car-select {
+    width: 365px;
+    height: 49px;
+    color: white;
+    background: transparent;
+    border: 2px solid #fff;
+    font-family: "Almaria Bold";
+    padding-left: 24px;
+    font-size: 19px;
+}
+
+#slider-bars {
+    margin: 40px 0;
+    padding: 15px;
+}
+
+.slider-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.slider-label {
+    color: white;
+    font-family: "Encode Sans Condensed", sans-serif;
+    width: 180px;
+}
+
+input[type="range"] {
+    flex: 1;
+    accent-color: white;
+    height: 4px;
+    background: transparent;
+}
+
+.slider-value {
+    color: white;
+    font-size: 1.2em;
+    margin-left: 12px;
+    min-width: 40px;
+    text-align: center;
+    font-family: "Encode Sans Condensed", sans-serif;
+}
+
+.slider-unit {
+    color: white;
+    font-size: 1em;
+    margin-left: 8px;
+    font-family: "Encode Sans Condensed", sans-serif;
+}
+
+#middle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#disclaimer {
+    color: white;
+    font-family: "open sans", sans-serif;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 20px; /* Add bottom spacing */
+    padding: 15px; /* Add padding for better readability */
+}
+
+.resource-img {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}
+
+#savings {
+    color: white;
+    background-color: rgba(64, 165, 207, 0.46);
+    margin-top: 40px;
+    height: 112px;
+    width: 403px;
+    border-radius: 25px;
+}
+
+#co2 {
+    color: white;
+    background-color: rgba(64, 165, 207, 0.46);
+    margin-top: 10px;
+    height: 112px;
+    width: 403px;
+    border-radius: 25px;
+}
+
+#savings-text {
+    display: inline-block;
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+#money {
+    display: flex;
+    justify-content: flex-end;
+    font-family: "open sans", sans-serif;
+    font-size: 27px;
+    padding-right: 20px;
+}
+
+#co2-text {
+    display: inline-block;
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+#s0 {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding-right: 20px;
+    justify-content: flex-start;
+    margin-top: -20px;
+}
+
+#s1 {
+    font-family: "open sans", sans-serif;
+    font-size: 27px;
+}
+
+#s2 {
+    font-family: "Encoded sans condensed", sans-serif;
+    font-size: 12px;
+}
+
+
+/* Janhvesh 2nd */
+.Janhvesh-2 {
+    background-color: black;
+    padding-top: 40px; /* Add spacing from previous section */
+}
+
+.Janhvesh-2 h1 {
+    color: white;
+    text-align: center;
+    font-size: 400%;
+    margin-top: 10px;
+    font-family: "Encode Sans Condensed", sans-serif;
+}
+
+#search-box {
+    display: flex;
+    justify-content: center;
+    height: 53px;
+    
+}
+
+#email {
+    margin-top: 5%;
+    width: 40%;
+    height: 100%;
+    background-color: rgba(217, 217, 217, 0.47);
+    border: none;
+    padding-left: 2%;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 30px;
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-size: 1em;
+}
+
+#email::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Encode Sans Condensed", sans-serif;
+    font-size: 1em;
+}
+
+#secondhalf-1 {
+    background-color: rgba(42, 89, 109, 1);
+    margin-top: 25vh;
+    height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#name1 {
+    color: rgb(76, 245, 141);
+    font-size: 2em;
+    font-family: "Encode Sans Condensed";
+}
+
+#name2 {
+    color: gray;
+    font-size: 2em;
+    font-family: "Encode Sans Condensed";
+}
+
+#explore ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+    line-height: 2em;
+}
+
+#explore ul li::before {
+    content: "➔ ";
+    color: white;
+}
+
+#brand-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Janhvesh-2 a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    height: 6em;
+    width: 6em;
+    align-self: center;
+}
+
+#social-logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contents {
+    color: white;
+    font-weight: medium;
+    font-family: "Encode Sans Condensed";
+}
+
+#secondhalf-2 {
+    background-color: rgba(42, 89, 109, 1);
+    color: white;
+    text-align: center;
+    font-size: 0.5em;
+    font-family: "Encode Sans Condensed";
+}
+
+#copyright {
+    background-color: rgba(42, 89, 109, 1);
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-family: "Encode Sans Condensed";
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+@media (max-width: 600px) {
+    .Janhvesh-2 h1 {
+        font-size: 2em;
+        margin-top: 2em;
+    }
+
+    #search-box {
+        flex-direction: column;
+        height: auto;
+        margin: 1em 0;
+    }
+
+    #email {
+        width: 90%;
+        font-size: 1em;
+        margin-top: 1em;
+    }
+
+    #secondhalf-1 {
+        flex-direction: column;
+        height: auto;
+        margin-top: 2em;
+        padding: 1em 0;
+        gap: 1.5em;
+    }
+
+    #logos {
+        text-align: center;
+    }
+
+    .contents {
+        text-align: left;
+        width: 90%;
+        margin: 0 auto 1em auto;
+        font-size: 1em;
+    }
+
+    #secondhalf-2, #copyright {
+        font-size: 0.8em;
+        padding: 1em 0;
+    }
+}
+
+
+
+
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="logo" height="121px" width="121px"/>
+            </div>
+            <nav class="nav">
+                <a href="#" class="nav-link" style="color: white;">Our Solutions</a>
+                <a href="#" class="nav-link" style="color: white;">Resources</a>
+                <a href="#" class="nav-link" style="color: white;">About</a>
+                <a href="#" class="nav-link" style="color: white;">Contact Us</a>
+                <a href="#" class="nav-link" style="color: white;">Help</a>
+            </nav>
+            <button class="signup-btn">Sign up</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="hero" id="xev9ePage">
+        <div class="hero-background">
+            <div class="circuit-lines"></div>
+            <div class="glow-effects"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="title-line">YOU'VE FELT THE DESIGN.</span>
+                        <span class="title-line">NOW EXPERIENCE THE DRIVE.</span>
+                    </h1>
+                    <button class="cta-btn">BOOK NOW</button>
+                </div>
+                <div class="hero-car">
+                    <div class="car-container">
+                        <img src="Car1-removebg-preview.png" alt="Electric Vehicle" class="car-image">
+                        <img src="Car2-removebg-preview.png" alt="Electric Vehicle Side View" class="car-image-secondary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- BE 6 Page -->
+    <div class="be6-page" id="be6Page">
+        <div class="be6-background">
+            <div class="circuit-lines"></div>
+            <div class="glow-effects"></div>
+        </div>
+        <div class="container">
+            <div class="be6-content">
+                <div class="be6-text">
+                    <h1 class="be6-title">
+                        <span class="be6-subtitle">RUN WILD. RUN FREE.</span>
+                        <span class="be6-main-title">BE THE FASTEST BEAST.</span>
+                    </h1>
+                    <p class="be6-description">
+                        Experience the ultimate in electric performance with the BE 6. 
+                        Cutting-edge technology meets raw power in this revolutionary vehicle.
+                    </p>
+                    
+                    <button class="be6-cta-btn">EXPLORE BE 6</button>
+                </div>
+                <div class="be6-car">
+                    <div class="be6-car-container">
+                        <img src="Car2-removebg-preview.png" alt="BE 6 Electric Vehicle" class="be6-car-image">
+                        <img src="Car3-removebg-preview.png" alt="BE 6 Side View" class="be6-car-image-secondary">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="back-btn" id="backToXev9e">← Back to XEV 9e</button>
+    </div>
+
+    <!-- INGLO Page -->
+    <div class="be6-page" id="ingloPage">
+        <div class="be6-background">
+            <div class="circuit-lines"></div>
+            <div class="glow-effects"></div>
+        </div>
+        <div class="container">
+            <div class="be6-content">
+                <div class="be6-text">
+                    <h1 class="be6-title">
+                        <span class="be6-subtitle">RISK IT ALL. CONQUER IT ALL.</span>
+                        <span class="be6-main-title">BE THE HERO OF YOUR STORY.</span>
+                    </h1>
+                    <p class="be6-description">
+                        Experience the ultimate in electric performance with the INGLO. 
+                        Cutting-edge technology meets raw power in this revolutionary vehicle.
+                    </p>
+                    
+                    <button class="be6-cta-btn">EXPLORE INGLO</button>
+                </div>
+                <div class="be6-car">
+                    <div class="be6-car-container">
+                        <img src="Car3-removebg-preview.png" alt="INGLO Electric Vehicle" class="be6-car-image">
+                        <img src="Car4-removebg-preview.png" alt="INGLO Side View" class="be6-car-image-secondary">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="back-btn" id="backToXev9eFromInglo">← Back to XEV 9e</button>
+    </div>
+
+    <!-- MAIA Page -->
+    <div class="be6-page" id="maiaPage">
+        <div class="be6-background">
+            <div class="circuit-lines"></div>
+            <div class="glow-effects"></div>
+        </div>
+        <div class="container">
+            <div class="be6-content">
+                <div class="be6-text">
+                    <h1 class="be6-title">
+                        <span class="be6-subtitle">FEAR NOTHING. CONQUER EVERYTHING.</span>
+                        <span class="be6-main-title">BE THE BEAST OF GLORY.</span>
+                    </h1>
+                    <p class="be6-description">
+                        Experience the ultimate in electric performance with the MAIA. 
+                        Cutting-edge technology meets raw power in this revolutionary vehicle.
+                    </p>
+                    
+                    <button class="be6-cta-btn">EXPLORE MAIA</button>
+                </div>
+                <div class="be6-car">
+                    <div class="be6-car-container">
+                        <img src="Car4-removebg-preview.png" alt="MAIA Electric Vehicle" class="be6-car-image">
+                        <img src="Car1-removebg-preview.png" alt="MAIA Side View" class="be6-car-image-secondary">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="back-btn" id="backToXev9eFromMaia">← Back to XEV 9e</button>
+    </div>
+
+
+    <!-- Kanushri page -->
+     <div class="KanushriPage">
+    <!-- HEADER -->
+    <header class="container">
+        <h1 class="text-center py-4 fw-bold display-6">A Car That Has It All</h1>
+  
+        <!-- Navigation (hidden on mobile, visible on md and up) -->
+        <div class="container pb-3 d-none d-md-block mt-5">
+          <div class="row text-center">
+            <div class="col">
+              <a href="#" class="fs-5 text-decoration-none text-white">FEATURE</a>
+            </div>
+            <div class="col">
+              <a href="#" class="fs-5 text-decoration-none text-white">SAFETY</a>
+            </div>
+            <div class="col">
+              <a href="#" class="fs-5 text-decoration-none text-white"
+                >TECHNOLOGY</a
+              >
+            </div>
+            <div class="col">
+              <a href="#" class="fs-5 text-decoration-none text-white">COMFORT</a>
+            </div>
+            <div class="col">
+              <a href="#" class="fs-5 text-decoration-none text-white">BATTERY</a>
+            </div>
+            <div class="col">
+              <a href="#" class="fs-5 text-decoration-none text-white"
+                >PERFORMANCE</a
+              >
+            </div>
+          </div>
+        </div>
+        <hr />
+      </header>
+  
+      <!-- MAIN CONTENT -->
+      <main class="container my-4">
+        <div class="row align-items-center">
+          <!-- Car Image -->
+          <div class="col-12 col-md-6 text-center car-col">
+            <img src="Top car.png" alt="Car Image" class="img-fluid car-img" />
+          </div>
+  
+          <!-- Mobile Features (on right side of car) -->
+          <div class="col-12 col-md-6 features-col mobile-features">
+            <div class="icon-box text-center mb-3">
+              <img src="1.png" alt="Feature 1" class="img-fluid" />
+              <p>4-Door and 5-Seater</p>
+            </div>
+            <div class="icon-box text-center mb-3">
+              <img src="2.png" alt="Feature 2" class="img-fluid" />
+              <p>Leather covered Steering Wheel</p>
+            </div>
+            <div class="icon-box text-center mb-3">
+              <img src="3.png" alt="Feature 3" class="img-fluid" />
+              <p>10.25" Integrated Floating Widescreen</p>
+            </div>
+          </div>
+  
+          <!-- Text Block -->
+          <div class="col-12 col-md-6 mt-4 mt-md-0">
+            <h2 class="fw-bold" style="font-size: 32px">
+              Where luxury meets attitude.
+            </h2>
+            <em class="d-block my-2" style="font-size: 19px"
+              >Leatherette Seats</em
+            >
+            <div class="feature-text">
+              <p>
+                Every single detail, from the meticulously crafted soft-touch
+                upholstery and ambient LED lighting to the sleek, ergonomically
+                designed dashboard, has been thoughtfully designed to not only
+                impress your senses but also pamper you with unmatched comfort and
+                elegance, making every drive feel like a first-class experience.
+              </p>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Desktop Features Row (below text) -->
+        <div class="row text-center mt-4 desktop-features">
+          <div class="col-md-4">
+            <img src="1.png" alt="Feature 1" class="img-fluid" />
+            <p>4-Door and 5-Seater</p>
+          </div>
+          <div class="col-md-4">
+            <img src="2.png" alt="Feature 2" class="img-fluid" />
+            <p>Leather covered Steering Wheel</p>
+          </div>
+          <div class="col-md-4">
+            <img src="3.png" alt="Feature 3" class="img-fluid" />
+            <p>10.25" Integrated Floating Widescreen</p>
+          </div>
+        </div>
+      </main>
+    </div>
+      <!-- Kanushri page end -->
+
+    <!-- Janhvesh page -->
+    <div class="Janhvesh">
+        <nav id="nav-bar">
+            <button class="nav-button" id="BTD"><img src="steering-wheel.png" id="Steering_wheel" class="logoimg">BOOK TEST DRIVE</button>
+            <button class="nav-button" id="FND"><img src="pin.png" id="Pin" class="logoimg">FIND NEAREST DEALER</button>
+            <button class="nav-button" id="CWE"><img src="chat.png" id="Chat" class="logoimg">CHAT WITH EXPERT</button>
+        </nav>       
+
+        <h1 id="heading">Powering a Sustainable Tomorrow</h1>
+        <p id="subhead">See the difference an EV can make to your wallet and the planet.</p>
+
+        <div class="content-box"> 
+            <div id="up">
+                <div class="drop">
+                    <label class="drop-title">eSUV of your choice</label>
+                    <br>
+                    <select id="car-select">
+                        <option value="XEV 9e">XEV 9e</option>
+                        <option value="BE 6">BE 6</option>
+                        <option value="INGLO">INGLO</option>
+                        <option value="MAIA">MAIA</option>
+                    </select>
+                </div>
+
+                <div class="drop">
+                    <label class="drop-title">Your current vehicle type</label>
+                    <br>
+                    <select id="car-select">
+                        <option value="XEV 9e">Petrol</option>
+                        <option value="BE 6">Diesel</option>
+                        <option value="INGLO">Electric</option>
+                        <option value="MAIA">Hybrid</option>
+                    </select>
+                </div>
+            </div>
+            <div id="down">
+                <div id="middle">
+                    <div id="slider-bars">
+                        <div class="slider-row">
+                            <label class="slider-label">Daily driving average</label>
+                            <input type="range" min="0" max="500" value="50" id="daily-driving">
+                            <span class="slider-value" id="daily-driving-value">50</span>
+                            <span class="slider-unit">KM</span>
+                        </div>
+
+                        <div class="slider-row">
+                            <label class="slider-label">Fuel Cost</label>
+                            <input type="range" min="0" max="200" value="109" id="fuel-cost">
+                            <span class="slider-unit">&#8377;</span>
+                            <span class="slider-value" id="fuel-cost-value">109</span>
+                        </div>
+
+                        <div class="slider-row">
+                            <label class="slider-label">No. of years</label>
+                            <input type="range" min="0" max="15" value="10" id="years">
+                            <span class="slider-value" id="years-value">10</span>
+                        </div>
+                    </div>
+
+                    <div id="resources">
+                        <div id="savings">
+                            <span id="savings-text">
+                                <img src="Savings.png" id="Savings" alt="Savings" class="resource-img">
+                                Total Savings
+                            </span> <br>
+
+                            <span id="money">
+                                &#8377;10,17,671
+                            </span>
+                        </div>
+
+                        <div id="co2">
+                            <span id="co2-text">
+                                <img src="CO2.png" id="co2-reduction" alt="co2-reduction" class="resource-img">
+                                CO<sub>2</sub> &nbsp; Reduction
+                            </span> <br>
+
+                            <span id="s0">
+                                <span id="s1">1234</span>
+                                <span id="s2">Full grown trees</span>
+                            </span>                    
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="disclaimer">
+                    <b>Disclaimer</b> : The savings figures presented are strictly estimates based on average assumptions for running costs,insurance premiums, and maintenance, and are intended to provide a general comparison between the AlphaVolt and a typical petrol or diesel SUV. It is important to understand that your actual costs could differ significantly due to a variety of factors.These include your personal driving habits and the distances you travel, which directly affect electricity consumption, as well as fluctuating regional electricity prices. Additionally, your individual insurance policy is tailored to factors like your driving record and location, and may not align with our average figures. While electric vehicles generally have lower maintenance needs, this estimate does not account for specific servicing requirements or unforeseen repairs.Furthermore, the provided figures do not include the costs associated with financing, loans, or any applicable government taxes, fees, or incentives, which can change over time.Therefore, this calculator is for illustrative purposes only and should not be considered as a form of financial or investment advice. We strongly recommend that you conduct your own thorough research and consult with relevant professionals before making any purchasing decisions.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Janhvesh page end -->
+
+    <!-- Janhvesh 2nd -->
+    <div class="Janhvesh-2">
+    <h1>Sign Up for our Newsletter</h1>
+
+    <div id="search-box">
+        <input type="text" id="email" placeholder="Your Email"></input>
+    </div>
+
+    <div id="secondhalf-1">
+        <div id="logos">
+            <div id="brand-name">
+                <img src="logo.png" alt="Logo" id="logo">
+                <span id="name1">Neo</span><span id="name2">Volt</span>
+            </div>
+
+            <div id="social-logos">
+                <i class="fa-brands fa-linkedin" style="color: #000000;"></i>
+                <i class="fa-brands fa-x-twitter" style="color: #000000;"></i>
+                <i class="fa-brands fa-instagram" style="color: #000000;"></i>
+                <i class="fa-brands fa-youtube" style="color: #000000;"></i>
+                <i class="fa-brands fa-facebook" style="color: #000000;"></i>
+            </div>
+        </div>
+        
+        <div class="contents" id="explore">
+            Explore <br>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Our Solutions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <div class="contents" id="hq">
+            Headquarters <br>
+            <p>NeoVolt EV Private Limited,<br> Ravet Chowk<br> Pune 411001 MH INDIA</p>
+        </div>
+
+        <div class="contents" id="conv"> 
+            Conversation <br>
+            <p>neovoltev@gmail.com</p>
+        </div>
+    </div>
+
+    <div id="secondhalf-2">
+        This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply
+    </div>
+    
+    <div id="copyright">
+        © 2025 NeoVolt EV. All rights reserved
+    </div>
+</div>
+<!-- Janhvesh-2 end -->
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" class="footer-link active" id="xev9eTrigger">XEV 9e</a>
+                    <a href="#" class="footer-link be6-trigger" id="be6Trigger">BE 6</a>
+                    <a href="#" class="footer-link inglo-trigger" id="ingloTrigger">INGLO</a>
+                    <a href="#" class="footer-link maia-trigger" id="maiaTrigger">MAIA</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/17D4eg1uAQ/" class="social-link">
+                        <img src="facebook logo.svg" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/rohank2409?igsh=YWkwN3hmbzZkNjVi" class="social-link">
+                        <img src="instagram logo.svg" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/rohan-kapadi?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link">
+                        <img src="linkedin logo.svg" alt="LinkedIn" class="social-icon">
+                    </a>
+                    <a href="https://x.com/RohanK2409?t=vSwH1MNH8qxy7FkjkPNVrg&s=09" class="social-link">
+                        <img src="x logo.svg" alt="Twitter" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="youtube logo.svg" alt="YouTube" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Page navigation functionality
+        const xev9eTrigger = document.getElementById('xev9eTrigger');
+        const be6Trigger = document.getElementById('be6Trigger');
+        const ingloTrigger = document.getElementById('ingloTrigger');
+        const maiaTrigger = document.getElementById('maiaTrigger');
+        const xev9ePage = document.getElementById('xev9ePage');
+        const be6Page = document.getElementById('be6Page');
+        const ingloPage = document.getElementById('ingloPage');
+        const maiaPage = document.getElementById('maiaPage');
+        const backToXev9eBtn = document.getElementById('backToXev9e');
+        const backToXev9eFromIngloBtn = document.getElementById('backToXev9eFromInglo');
+        const backToXev9eFromMaiaBtn = document.getElementById('backToXev9eFromMaia');
+
+        // Function to hide all pages
+        function hideAllPages() {
+            xev9ePage.classList.remove('fade-in');
+            xev9ePage.classList.add('fade-out');
+            be6Page.classList.remove('show');
+            be6Page.classList.add('fade-out');
+            ingloPage.classList.remove('show');
+            ingloPage.classList.add('fade-out');
+            maiaPage.classList.remove('show');
+            maiaPage.classList.add('fade-out');
+        }
+
+        // Function to remove all active states
+        function removeAllActiveStates() {
+            xev9eTrigger.classList.remove('active');
+            be6Trigger.classList.remove('active');
+            ingloTrigger.classList.remove('active');
+            maiaTrigger.classList.remove('active');
+        }
+
+        // Function to show XEV 9e page
+        function showXev9ePage() {
+            hideAllPages();
+            xev9ePage.classList.remove('fade-out');
+            xev9ePage.classList.add('fade-in');
+            
+            removeAllActiveStates();
+            xev9eTrigger.classList.add('active');
+            
+            document.body.style.overflow = 'auto';
+        }
+
+        // Function to show BE 6 page
+        function showBe6Page() {
+            hideAllPages();
+            be6Page.classList.remove('fade-out');
+            be6Page.classList.add('show');
+            
+            removeAllActiveStates();
+            be6Trigger.classList.add('active');
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to show INGLO page
+        function showIngloPage() {
+            hideAllPages();
+            ingloPage.classList.remove('fade-out');
+            ingloPage.classList.add('show');
+            
+            removeAllActiveStates();
+            ingloTrigger.classList.add('active');
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Function to show MAIA page
+        function showMaiaPage() {
+            hideAllPages();
+            maiaPage.classList.remove('fade-out');
+            maiaPage.classList.add('show');
+            
+            removeAllActiveStates();
+            maiaTrigger.classList.add('active');
+            
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Event listeners
+        xev9eTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            showXev9ePage();
+        });
+
+        be6Trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            showBe6Page();
+        });
+
+        ingloTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            showIngloPage();
+        });
+
+        maiaTrigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            showMaiaPage();
+        });
+
+        backToXev9eBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showXev9ePage();
+        });
+
+        backToXev9eFromIngloBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showXev9ePage();
+        });
+
+        backToXev9eFromMaiaBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            showXev9ePage();
+        });
+
+        // Initialize with XEV 9e page visible
+        showXev9ePage();
+
+
+        // Janhvesh
+        document.getElementById('daily-driving').oninput = function() {
+            document.getElementById('daily-driving-value').textContent = this.value;
+        };
+        
+        document.getElementById('fuel-cost').oninput = function() {
+            document.getElementById('fuel-cost-value').textContent = this.value;
+        };
+        
+        document.getElementById('years').oninput = function() {
+            document.getElementById('years-value').textContent = this.value;
+        };
+
+    </script>
+</body>
+</html>
